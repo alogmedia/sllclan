@@ -12,7 +12,11 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/seo": "2.0.0-rc.21",
     "nuxt": "^3.13.0",
+    "sass": "^1.79.1",
+    "scss": "^0.2.4",
     "vue": "latest",
     "vue-router": "latest"
   },
