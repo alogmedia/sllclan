@@ -9,35 +9,16 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    <Header />
-    <div class="welcome-box">
-      <p>Welcome</p>
-      <div class="navigation">
-        <button @click="goToMore" class="about">About Us</button>
-        <button @click="goToDiscord" class="discord">Discord</button>
-      </div>
-    </div>
+    <main>
+      <Header />
+      <WelcomeBox />
+    </main>
   </div>
 </template>
 
-<script>
+<script scoped>
 import Header from "~/components/Header.vue";
-
-export default {
-  components: {
-    Header,
-  },
-  methods: {
-    goToMore() {
-      // redirect or open a new page
-      this.$router.push("/about");
-    },
-    goToDiscord() {
-      // Open the URL in a new tab
-      window.open("https://discord.gg/MDptAYZUfB", "_blank");
-    },
-  },
-};
+import WelcomeBox from "~/components/WelcomeBox.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -47,6 +28,9 @@ export default {
   height: 100vh;
   overflow: hidden;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .video-container {
@@ -64,60 +48,31 @@ export default {
   object-fit: cover;
 }
 
-.welcome-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+main {
+  z-index: 1;
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
   background: rgba(0, 0, 0, 0.7);
-  padding: 40px 200px;
-  color: white;
+  border-radius: 5px;
   text-align: center;
-  border-radius: 5px;
+  color: white;
+  box-sizing: border-box;
+}
 
-  p {
-    font-size: 24px;
-    font-weight: 600;
+// Media Queries for responsiveness
+@media (max-width: 768px) {
+  main {
+    width: 95%;
+    padding: 15px;
   }
 }
 
-.navigation {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-button {
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #fff;
-  color: #000;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  gap: 30px;
-}
-
-.about {
-  background-color: #f2c15a;
-  color: #000;
-  font-weight: 600;
-
-  &:hover {
-    background-color: #fffefb;
-  }
-}
-
-.discord {
-  background-color: #7289da;
-  color: #fff;
-  font-weight: 600;
-
-  &:hover {
-    background-color: #1d2338;
+@media (max-width: 480px) {
+  main {
+    width: 100%;
+    padding: 10px;
   }
 }
 </style>

@@ -17,7 +17,7 @@ import logoSrc from "@/assets/images/logo.png";
 }
 
 .logo {
-  max-width: 500px; /* Adjust the logo size as needed */
+  width: 100%;
   height: auto;
 }
 </style>
