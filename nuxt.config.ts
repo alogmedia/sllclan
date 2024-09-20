@@ -8,7 +8,12 @@ export default defineNuxtConfig({
     preset: "cloudflare-pages",
   },
 
-  modules: ["nitro-cloudflare-dev", "@nuxtjs/seo", "@nuxtjs/google-fonts", "@nuxt/icon"],
+  modules: [
+    "nitro-cloudflare-dev",
+    "@nuxtjs/seo",
+    "@nuxtjs/google-fonts",
+    "@nuxt/ui",
+  ],
 
   googleFonts: {
     families: {

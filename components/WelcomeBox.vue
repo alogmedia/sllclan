@@ -68,15 +68,16 @@ onMounted(() => {
 }
 
 .welcome-details {
-  width: 50%;
+  width: 75%;
 }
 
 .serverdetails {
   margin-bottom: 20px;
-  border: #fff solid 1px;
+  border: solid 1px rgba(238, 238, 238, 0.05);
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.7);
 
   p {
     font-size: 1rem;
@@ -91,7 +92,6 @@ onMounted(() => {
 }
 
 button {
-  border-radius: 5px;
   border: none;
   cursor: pointer;
   font-size: 1rem;
@@ -120,6 +120,7 @@ button {
   background-color: #f2c15a;
   color: #000;
   font-weight: 600;
+  width: 50%;
 
   &:hover {
     background-color: #ffffff;
