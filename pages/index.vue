@@ -11,7 +11,7 @@
     </div>
     <main>
       <Header />
-      <WelcomeBox />
+      <Accordion />
     </main>
   </div>
 </template>
@@ -25,8 +25,7 @@ import WelcomeBox from "~/components/WelcomeBox.vue";
 .home-page {
   background-color: #1e1e1e;
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -38,13 +37,12 @@ import WelcomeBox from "~/components/WelcomeBox.vue";
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   z-index: -1;
 }
 
 #background-video {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
 }
 
@@ -54,7 +52,6 @@ main {
   width: 100%;
   height: 100%;
   padding: 0px;
-  background: rgba(0, 0, 0, 0.7);
   text-align: center;
   color: white;
 }
@@ -64,6 +61,14 @@ main {
   main {
     width: 100%;
     padding: 0;
+  }
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
   }
 }
 
