@@ -51,28 +51,26 @@ import WelcomeBox from "~/components/WelcomeBox.vue";
 main {
   z-index: 1;
   position: relative;
-  width: 90%;
-  max-width: 800px;
-  padding: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
   background: rgba(0, 0, 0, 0.7);
-  border-radius: 5px;
   text-align: center;
   color: white;
-  box-sizing: border-box;
 }
 
 // Media Queries for responsiveness
 @media (max-width: 768px) {
   main {
-    width: 95%;
-    padding: 15px;
+    width: 100%;
+    padding: 0;
   }
 }
 
 @media (max-width: 480px) {
   main {
     width: 100%;
-    padding: 10px;
+    padding: 0;
   }
 }
 </style>
